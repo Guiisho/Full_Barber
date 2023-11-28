@@ -1,0 +1,18 @@
+
+<div class="formulario">
+    <h1>INICIO DE SESIÓN</h1>
+    <form  (ngSubmit)="onSubmit()">
+        <div class="username">
+            <input type="text" id="user" [(ngModel)]="user.user" name="user" placeholder="Nombre de usuario" required>
+        </div>
+        <div class="password">
+            <input type="password" id="password" [(ngModel)]="user.password" name="password" placeholder="Contraseña">
+        </div>
+        <input type="submit" value="Iniciar">
+        <div *ngIf="error" class="error-message">{{ error }}</div>
+        <div class="registro">
+            ¿Aun no está registrado? Registrese <a routerLink="/register">aquí</a>
+        </div>
+
+    </form>
+</div>

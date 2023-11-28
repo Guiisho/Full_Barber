@@ -1,0 +1,23 @@
+
+<div class="formulario">
+    <h1>REGISTRO</h1>
+    <form (ngSubmit)="onSubmit()">
+        <div class="user">
+            <input type="text" id="user" [(ngModel)]="user.user" name="'user'" placeholder="Nombre de usuario" required>
+        </div>
+        <div class="password">
+            <input type="password" [(ngModel)]="user.password" id="password" name="'password'" placeholder="Contraseña" required>
+        </div>
+        <div class="password">
+            <input type="password" [(ngModel)]="user.confirmPassword" id="confirmPassword" name="'confirmPassword'" placeholder="Confirmar contraseña" required>
+        </div>
+        <input type="submit" value="Registrarse"> 
+        <div *ngIf="error" class="error-message">{{ error }}</div>
+        <div class="registro">
+            ¿Ya tiene sesión? Inicia sesión <a routerLink="/login">aquí</a>
+        </div>
+
+    </form>
+
+  
+</div>
